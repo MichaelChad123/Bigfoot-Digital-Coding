@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+*,html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,label,fieldset,input,p,blockquote,th,td {margin: 0; padding: 0;}
+
+h2, p, h1, a, li, ul, span {font-family: 'Playfair Display',Georgia,"Times New Roman",serif;}
+
+article,aside,figure,footer,header,hgroup,nav,section {display: block;}
+
+* {-webkit-box-sizing: border-box;  -moz-box-sizing: border-box; box-sizing: border-box;}
+
+html {-webkit-font-smoothing: antialiased;}
+
+a {color: #BA0707; text-decoration: none;}
+
+a:hover {color: #BA0707;}
+
+body {color: #374147; font: 14px "Open Sans",Helvetica,Arial,sans-serif; -webkit-font-smoothing: antialiased; line-height: 1; width: 100%;}
+
+/* THIS IS WHERE THE HEADER & NAVIGATION CSS STARTS */
+
+.header {margin: 0 auto; background: #fff;} 
+
+.logo {margin: 0 auto; text-align: center;}
+
+.logo img {width: 200px;}
+
+nav {display: block; background: #fff;}
+
+.menu {display: block;text-align: center;}
+
+.menu li {display: inline-block; position: relative;z-index: 100;}
+
+.menu li:first-child {margin-left: 0;}
+
+.menu li a {font-weight: 500; text-decoration: none; padding: 20px 15px; display: block; color: #000; transition: all 0.2s ease-in-out 0s; font-size: 16px;}
+
+.menu li a:hover,.menu li:hover>a {color: #000;}
+
+.menu ul {visibility: hidden; opacity: 0; margin: 0; padding: 0; width: 240px; position: absolute; left: 0px; background: #fff; z-index: 99; transform: translate(0,20px); transition: all 0.2s ease-out;}
+
+.menu ul:after {bottom: 100%; left: 20%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(255, 255, 255, 0); border-bottom-color: #fff; border-width: 6px; margin-left: -6px;}
+
+.menu ul li {display: block; float: none; background: none; margin: 0; padding: 0;}
+
+.menu ul li a {font-size: 12px; font-weight: normal; display: block; color: #797979; background: #fff;}
+
+.menu ul li a:hover,.menu ul li:hover>a {background: #62e3f470; color: #000; letter-spacing: 1px; font-size: 14px;}
+
+.menu li:hover>ul {visibility: visible; opacity: 1; transform: translate(0,0); text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,.1); border-top: 3px solid #62e3f4;}
+
+.menu ul ul {left: 169px; top: 0px; visibility: hidden; opacity: 0; transform: translate(20px,20px); transition: all 0.2s ease-out;}
+
+.menu ul ul:after {left: -6px; top: 10%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(255, 255, 255, 0); border-right-color: #fff; border-width: 6px; margin-top: -6px;}
+
+.menu li>ul ul:hover {visibility: visible; opacity: 1; transform: translate(0,0);}
+
+.responsive-menu {display: none; width: 100%; padding: 20px 15px; background: #374147; color: #fff; text-transform: uppercase; font-weight: 600;}
+
+.responsive-menu:hover {background: #374147; color: #fff; text-decoration: none;}
+
+.modal {display: none; position: fixed; z-index: 999; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+
+.modal-content {background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888; width: 80%;}
+
+.close {color: #aaa; float: right; font-size: 30px; font-weight: bold;}
+
+.close:hover, .close:focus {color: #000; text-decoration: none; cursor: pointer;}
+
+.hero-section {background-image: url(Photos/hero.jpg); background-repeat: no-repeat; padding: 100px; height: 800px; background-attachment: fixed; background-position: top; background-size: cover; color: #979797;}
+
+.banner-overlay {background: #fff; margin: 0 auto; z-index: 15; width: 950px; height: 410px;  font-size: 1.6rem; font-weight: 400; line-height: 1.875; padding: 70px 240px; letter-spacing: .025em; box-shadow: 0 12px 26.68px 2.32px rgba(0,0,0,0.31); text-align: center; position: relative;}
+
+.banner-overlay:before {content: ''; position: absolute; top: 16px; right: 16px; bottom: 16px; left: 16px; border: 1px solid #245396; pointer-events: none;}
+
+.heading {font-size: 30px; letter-spacing: 1px; color: #245396;}
+
+.heading span {font-weight: 700; text-transform: uppercase; letter-spacing: 5px; font-size: 50px;}
+
+.line {border-top: 1px solid #245396; width: 136px; margin: 10px auto 15px auto;}
+
+.banner-btn {position: absolute; bottom: -15px; width: 100%; text-align: center; left: 0px;}
+
+.btn {white-space: normal; background-color: #63e3f4; color: #fff; font-size: 1.377rem; font-weight: 700; font-style: italic; line-height: 2.179; text-transform: uppercase; letter-spacing: .2em; padding: 13px 40px; border-radius: 0; -webkit-transition: background-color 0.3s; transition: background-color 0.3s;}
+
+.btn:hover {background-color: #19366a; color: #fff;}
+
+.fade-in {opacity: 0; transition: opacity 700ms ease-in;}
+
+.fade-in.appear {opacity: 1;}
+
+.review {text-align: center; background-color: #62e3f491; padding: 20px; line-height: 3rem;}
+
+.review h2, .consultation h2 {font-weight: 500; color: #245396;}
+
+.consultation {text-align: center; padding: 0; background: #62e3f44f; padding: 20px; line-height: 3rem;}
+
+.about-container, .general-dentistry-container, .cosmetic-dentistry-container, .surgical-dentistry-container {padding: 50px 100px; margin: auto; height: 700px; width: 90%;}
+
+.about-container h2, .general-dentistry-container h2, .cosmetic-dentistry-container h2, .surgical-dentistry-container h2, .smile-makeover-container h2 {font-size: 45px; padding-bottom: 10px; font-family: 'Playfair Display',Georgia,"Times New Roman",serif;}
+
+.about-container p, .general-dentistry-container p, .cosmetic-dentistry-container p, .surgical-dentistry-container p, .smile-makeover-container p {padding-bottom: 1em; line-height: 30px; letter-spacing: 1px; font-size: 18px;}
+
+.learn-more a, .general-dentistry-container a, .cosmetic-dentistry-container a, .surgical-dentistry-container a, .smile-makeover-container a {border-bottom: 2px solid #000; letter-spacing: 5px; text-transform: uppercase; font-weight: 800; color: #000;}
+
+.learn-more a:hover, .general-dentistry-container a:hover .cosmetic-dentistry-container a:hover, .surgical-dentistry-container a:hover, .smile-makeover-container a:hover {text-decoration: none;}
+
+.about-image {padding: 0; height: 600px;}
+
+.general-dentistry-image, .cosmetic-dentistry-image, .surgical-dentistry-image {height: 700px; padding: 0;}
+
+.about-image img, .general-dentistry-image img, .cosmetic-dentistry-image img, .surgical-dentistry-image img, .smile-makeover-image img {width: 100%; object-fit: cover; height: 100%;}
+
+.general-dentistry-container ul, .cosmetic-dentistry-container ul, .surgical-dentistry-container ul {padding-left: 20px; margin-bottom: 30px;}
+
+.general-dentistry-container li, .cosmetic-dentistry-container li, .surgical-dentistry-container li {padding: 10px 0; font-size: 18px;}
+
+.smile-makeover {padding: 0;}
+
+.smile-makeover-container {padding: 100px 50px; background-color: #cef6fc;}
+
+.smile-makeover-image {height: 540px; padding: 0;}
+
+.as-seen-on {text-align: center; padding: 75px 0; text-transform: uppercase; background-color: rgba(245,245,245,0.5)!important; letter-spacing: 3px;}
+
+.usp {text-align: center;}
+
+.usp img {width: 100px; padding-bottom: 30px;}
+
+.usp p {font-size: 18px;}
+
+.why-choose-us {text-align: center; padding: 50px;}
+
+.why-choose-us h2 {margin-bottom: 50px;}
+
+.form {background: rgba(19, 35, 47, .9); padding: 40px; max-width: 600px; margin: 40px auto; border-radius: 4px; box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);}
+ 
+.tab-group {list-style: none; padding: 0; margin: 0 0 40px 0;}
+ 
+.tab-group:after {content: ""; display: table; clear: both;}
+ 
+.tab-group li a {display: block; text-decoration: none; padding: 15px; background: rgba(160, 179, 176, .25); color: #a0b3b0; font-size: 20px; float: left; width: 50%; text-align: center; cursor: pointer; transition: 0.5s ease;}
+ 
+.tab-group li a:hover {background: #179b77; color: #fff;}
+ 
+.tab-group .active a {background: #1ab188; color: #fff;}
+ 
+.tab-content > div:last-child {display: none;}
+ 
+h1 {text-align: center; color: #fff; font-weight: 300; margin: 0 0 40px;}
+ 
+label {position: absolute; transform: translateY(6px); left: 13px; color: rgba(255, 255, 255, .5); transition: all 0.25s ease; -webkit-backface-visibility: hidden; pointer-events: none; font-size: 22px;}
+ 
+label .req {margin: 2px; color: #1ab188;}
+ 
+label.active {transform: translateY(50px); left: 2px; font-size: 14px;}
+ 
+label.active .req {opacity: 0;}
+ 
+label.highlight {color: #fff;}
+ 
+input, textarea {font-size: 22px; display: block; width: 100%; height: auto; padding: 5px 10px; background: none; background-image: none; border: 1px solid #a0b3b0; color: #fff; border-radius: 0; transition: border-color 0.25s ease, box-shadow 0.25s ease;}
+ 
+input:focus, textarea:focus {outline: 0; border-color: #1ab188;}
+ 
+textarea {border: 2px solid #a0b3b0; resize: vertical;}
+ 
+.field-wrap {position: relative; margin-bottom: 40px;}
+ 
+.top-row:after {content: ""; display: table; clear: both;}
+ 
+.top-row > div {float: left; width: 48%; margin-right: 4%;}
+ 
+.top-row > div:last-child {margin: 0;}
+ 
+.button {border: 0; outline: none; border-radius: 0; padding: 15px 0; font-size: 2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; background: #1ab188; color: #fff; transition: all 0.5s ease; -webkit-appearance: none;}
+ 
+.button:hover, .button:focus {background: #179b77;}
+ 
+.button-block {display: block; width: 100%;}
+ 
+.forgot {margin-top: -20px; text-align: right;}
+
+.footer {padding: 50px; background-color: #f2f2f2;}
+
+.category h2 {padding-bottom: 20px;}
+
+.category p {padding-bottom: 10px; font-size: 14px;}
+
+.as-seen-on img {width: 150px;}
+
+.as-seen-on h2 {margin-bottom: 50px;}
+
+@media (max-width: 1024px) {
+    
+    .about-container, .general-dentistry-container, .cosmetic-dentistry-container, .surgical-dentistry-container {height: auto; padding: 20px 0;}
+    
+    .about-image {height: 700px;}
+    
+    .cosmetic-dentistry-image {display: none;}
+    
+    #visible-1024 {display: block!important;}
+    
+    .smile-makeover-image {height: 640px;}
+    
+    .smile-makeover-container {padding: 50px 30px;}
+    
+    .banner-overlay {width: auto; padding: 70px 100px;}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .menu ul {top: 37px;}
+
+    .menu li a {font-size: 12px;}
+}
+
+@media (max-width: 768px) {
+
+    .menu {display: none;}
+
+    .responsive-menu {display: block;}
+
+    nav {margin: 0; background: none;}
+
+    .menu li {display: block; margin: 0;}
+
+    .menu li a {background: #fff;color: #797979;}
+
+    .menu li a:hover,.menu li:hover>a {background: #245396; color: #fff;}
+
+    .menu ul {visibility: hidden; opacity: 0; top: 0; left: 0; width: 100%; transform: initial;}
+
+    .menu li:hover>ul {visibility: visible; opacity: 1; position: relative; transform: initial;}
+
+    .menu ul ul {left: 0; transform: initial;}
+
+    .menu li>ul ul:hover {transform: initial;}
+    
+    .hero-section {padding: 50px; height: 600px;}
+    
+    .banner-overlay {padding: 100px; width: 100%;}
+    
+    .about-container {padding: 50px 20px; height: auto;}
+    
+    .about-container, .general-dentistry-container, .cosmetic-dentistry-container, .surgical-dentistry-container {padding: 50px 20px; height: auto;}
+    
+    .slick-dots {display: none!important;}
+    
+    .usp img {margin: 0 auto;}
+    
+     .why-choose-us-usps {height: 200px;}
+    
+    .category {margin-bottom: 50px;}
+    
+    .smile-makeover-image {height: 300px;}
+    
+    .as-seen-on-images {height: 100px;}
+}
+
+@media (max-width: 425px) {
+    
+    .hero-section {height: auto; padding: 100px 0;}
+    
+    .banner-overlay {height: auto; width: 100%; padding: 70px 30px;}
+    
+    .heading {font-size: 20px; letter-spacing: 1px;}
+    
+    .heading span {font-size: 35px; letter-spacing: 3px;}
+    
+    .about-image {height: 350px;}
+    
+    .general-dentistry-image, .cosmetic-dentistry-image, .surgical-dentistry-image {height: 350px;}
+    
+    .modal-content {padding: 10px; width: 100%;}
+    
+    label {font-size: 12px;}
+}
+
+@media (max-width: 320px) {
+}
